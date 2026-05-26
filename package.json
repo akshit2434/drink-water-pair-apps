@@ -1,0 +1,36 @@
+{
+  "name": "drink-water-pair-apps",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^3.1.0",
+    "@types/jest": "^30.0.0",
+    "@types/react-test-renderer": "^19.1.0",
+    "expo": "~56.0.4",
+    "expo-clipboard": "^56.0.3",
+    "expo-constants": "^56.0.15",
+    "expo-device": "^56.0.4",
+    "expo-notifications": "^56.0.13",
+    "expo-status-bar": "~56.0.4",
+    "jest": "^30.4.2",
+    "react": "19.2.3",
+    "react-native": "0.85.3",
+    "react-test-renderer": "^19.2.3",
+    "ts-jest": "^29.4.11"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android:sender": "APP_VARIANT=sender expo start --android",
+    "android:receiver": "APP_VARIANT=receiver expo start --android",
+    "prebuild:sender": "export APP_VARIANT=sender; export EXPO_PUBLIC_APP_VARIANT=sender; expo prebuild --platform android --clean",
+    "prebuild:receiver": "export APP_VARIANT=receiver; export EXPO_PUBLIC_APP_VARIANT=receiver; expo prebuild --platform android --clean",
+    "build:sender:apk": "export APP_VARIANT=sender; export EXPO_PUBLIC_APP_VARIANT=sender; export NODE_ENV=production; expo prebuild --platform android --clean && cd android && ./gradlew assembleRelease && cd .. && mkdir -p dist && cp android/app/build/outputs/apk/release/app-release.apk dist/drink-water-button.apk",
+    "build:receiver:apk": "export APP_VARIANT=receiver; export EXPO_PUBLIC_APP_VARIANT=receiver; export NODE_ENV=production; expo prebuild --platform android --clean && cd android && ./gradlew assembleRelease && cd .. && mkdir -p dist && cp android/app/build/outputs/apk/release/app-release.apk dist/drink-water-reminder.apk",
+    "test": "jest",
+    "typecheck": "tsc --noEmit"
+  }
+}
