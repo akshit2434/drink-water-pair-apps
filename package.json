@@ -1,5 +1,6 @@
 {
   "name": "drink-water-pair-apps",
+  "description": "Two-phone reminder app using one Expo codebase, two Android identities, manual token pairing, and direct Expo push notifications.",
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
