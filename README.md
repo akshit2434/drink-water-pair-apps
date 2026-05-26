@@ -44,7 +44,7 @@ flowchart LR
   D --> E["Receiver device shows notification"]
 ```
 
-The interesting constraint is that both app identities come from the same source tree. Variant metadata lives in `src/variant.ts`, `src/variantConfig.js`, and `app.config.js`, while the UI branches at runtime in [App.tsx](/Users/akshit2434/Documents/DrinkWater-public/App.tsx).
+The interesting constraint is that both app identities come from the same source tree. Variant metadata lives in `src/variant.ts`, `src/variantConfig.js`, and `app.config.js`, while the UI branches at runtime in [`App.tsx`](App.tsx).
 
 ## Interesting Technical Decisions
 
@@ -100,4 +100,4 @@ Useful build commands:
 
 ## Public Repo Sanitization Notes
 
-This public version removes private project identifiers, service files, build artifacts, and any relationship-specific copy. Safe placeholders are used where local/private setup previously existed.
+This public version removes private project identifiers, service files, build artifacts, and private-context copy. Safe placeholders are used where local/private setup previously existed.
